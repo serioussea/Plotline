@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --plotline-bg: #fffafc;
+    --plotline-surface: #ffffff;
+    --plotline-blush: #fce4ec;
+    --plotline-baby: #f8c8dc;
+    --plotline-rose: #efa7c5;
+    --plotline-strawberry: #ed75a7;
+    --plotline-hot-pink: #d94f93;
+    --plotline-berry: #b93778;
+    --plotline-mauve: #ba86a6;
+    --plotline-plum: #4f3048;
+    --plotline-lavender: #f3e8f7;
+    --plotline-warm-gray: #6e626c;
+    --plotline-border: rgba(186, 134, 166, 0.24);
+  }
+
+  html,
+  body {
+    background-color: var(--plotline-bg);
+    color: var(--plotline-plum);
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-editorial {
+    font-family: "Playfair Display", Georgia, serif;
+  }
+
+  .font-literary {
+    font-family: "Cormorant Garamond", Georgia, serif;
+  }
+
+  .font-mono-tabular {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  *:focus-visible {
+    outline: 2px solid #d94f93;
+    outline-offset: 2px;
+  }
+}
+
+/* Writing size preference utilities */
+.writing-size-small {
+  --writing-text-size: 0.875rem;
+  --writing-line-height: 1.65;
+}
+.writing-size-medium {
+  --writing-text-size: 1rem;
+  --writing-line-height: 1.7;
+}
+.writing-size-large {
+  --writing-text-size: 1.125rem;
+  --writing-line-height: 1.75;
+}
+
+.writing-prose {
+  font-size: var(--writing-text-size, 1rem);
+  line-height: var(--writing-line-height, 1.7);
+}
+
+/* Soft stationery glass & surface helpers */
+.stationery-panel {
+  background: rgba(255, 250, 252, 0.88);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(237, 117, 167, 0.18);
+  box-shadow: 0 10px 32px -12px rgba(79, 48, 72, 0.08);
+}
+
+.stationery-card {
+  background: #ffffff;
+  border: 1px solid rgba(186, 134, 166, 0.24);
+  box-shadow: 0 6px 24px -10px rgba(79, 48, 72, 0.07);
+}
+
+.stationery-card-interactive {
+  background: #ffffff;
+  border: 1px solid rgba(186, 134, 166, 0.24);
+  box-shadow: 0 6px 24px -10px rgba(79, 48, 72, 0.07);
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stationery-card-interactive:hover {
+  transform: translateY(-2px);
+  border-color: rgba(217, 79, 147, 0.38);
+  box-shadow: 0 14px 30px -12px rgba(217, 79, 147, 0.16);
+}
+
+.headline-balance {
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stationery-card-interactive,
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

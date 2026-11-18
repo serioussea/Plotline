@@ -1,0 +1,892 @@
+# Build a Functional AI Creative Writing App Called Plotline
+
+## 1. Project Overview
+
+Build a beautiful, fully functional, responsive AI-powered creative writing application called **Plotline**.
+
+**Tagline:** Where stories take shape.
+
+Plotline is a creative writing studio for novelists, screenwriters, fanfiction writers, and narrative game designers who want to develop complex stories with AI assistance without losing creative control.
+
+The app should combine the organizational capabilities of Notion, the story-development features of dedicated writing software, and the conversational flexibility of an AI writing assistant.
+
+Its defining feature is its ability to distinguish between **established story canon, hypothetical ideas, abandoned concepts, and newly approved narrative developments**.
+
+The core problem Plotline solves is that writers who brainstorm with AI often explore dozens of different story directions, only for the AI to eventually confuse abandoned ideas with established facts, forget character details, contradict earlier decisions, or treat speculative brainstorming as finalized story canon.
+
+Plotline should give writers a dedicated creative environment where they can explore freely while maintaining full control over what becomes part of their story.
+
+This must be a genuinely working application, not merely a static UI concept or clickable mockup.
+
+I want to be able to use the app myself, create projects, save information, edit characters, generate AI suggestions, experiment with plot branches, and return to my work after refreshing the page.
+
+---
+
+## 2. Visual Identity: Feminine, Pink, Editorial, and Luxurious
+
+The app should have a distinctly pink aesthetic that feels elegant, dreamy, creative, and polished.
+
+Think of a premium digital stationery brand combined with a beautiful literary writing studio.
+
+The visual direction should be:
+
+- Feminine, romantic, and slightly whimsical
+- Editorial and typography-driven
+- Modern, clean, and sophisticated
+- Soft and inviting, but not childish
+- A little glossy, with subtle glassmorphism
+- Comfortable to use during long writing sessions
+- Visually distinctive enough to feature in a UX/product design portfolio
+
+### Color palette
+
+Use these colors as the primary visual system:
+
+- Baby Pink: `#F8C8DC`
+- Blush Pink: `#FCE4EC`
+- Soft Rose: `#EFA7C5`
+- Strawberry Pink: `#ED75A7`
+- Hot Pink Accent: `#D94F93`
+- Dusty Mauve: `#BA86A6`
+- Deep Plum: `#4F3048`
+- Cream White: `#FFFAFC`
+- Soft Lavender: `#F3E8F7`
+- Warm Gray: `#766B74`
+
+The main background should be a very light cream-pink, with white and blush panels.
+
+Use deeper pink and plum for text and interactive elements. Make sure buttons, navigation labels, body text, and form fields have accessible contrast.
+
+Use hot pink sparingly to highlight primary actions, selected tabs, active states, and important creative decisions.
+
+Use subtle pink gradients, translucent pink panels, gentle borders, and diffused shadows.
+
+Avoid excessive neon colors, harsh black backgrounds, generic corporate blue, or an overly childish Barbie aesthetic.
+
+### Typography
+
+Use a sophisticated serif font for major headings, such as Playfair Display or Cormorant Garamond.
+
+Use a clean, modern sans-serif font such as DM Sans or Inter for body text, navigation, forms, and smaller interface components.
+
+Major headings should feel like chapter titles in an elegantly typeset novel.
+
+Use generous whitespace, comfortable line spacing, and a clear visual hierarchy.
+
+### Interface details
+
+Include:
+
+- Rounded cards and input fields
+- Soft shadows
+- Gentle hover animations
+- Elegant modal dialogs
+- Small outlined icons
+- Beautiful pill-shaped category labels
+- Smooth transitions between application sections
+- Subtle gradient accents
+- Attractive empty states
+- Pleasant loading indicators
+- Responsive desktop, tablet, and mobile layouts
+
+The interface should feel premium and intentional.
+
+Do not add animations that distract from writing.
+
+---
+
+## 3. Main Application Layout
+
+Build a professional application layout with a collapsible left sidebar, central workspace, and optional contextual right panel.
+
+### Left sidebar
+
+At the top, display a small pink book or flower-inspired icon next to the application name:
+
+**Plotline**
+
+Underneath, display the tagline:
+
+*Where stories take shape.*
+
+Navigation should include:
+
+1. Dashboard
+2. My Stories
+3. Character Bible
+4. Story Canon
+5. Plot Board
+6. What-If Engine
+7. AI Writing Companion
+8. Settings
+
+Some sections should be project-specific. When a project is open, the sidebar should clearly indicate the currently selected story.
+
+Use small elegant icons for each section.
+
+Make the sidebar collapsible on desktop and accessible through a menu on mobile.
+
+### Top navigation
+
+Include:
+
+- Current project title
+- Current section or breadcrumb
+- Project switcher
+- Autosave status
+- Export option
+- Settings
+
+The interface should always make it clear whether changes have been saved.
+
+---
+
+## 4. Dashboard and Project Management
+
+Build a beautiful landing dashboard that welcomes users into their writing workspace.
+
+At the top, display a heading such as:
+
+**Your next great story starts here.**
+
+Below that:
+
+*Every character has a secret. Every story has a thousand possibilities.*
+
+Provide a prominent button labeled:
+
+**+ Create New Story**
+
+Users must be able to:
+
+- Create new story projects
+- Name and rename projects
+- Add a synopsis
+- Select one or multiple genres
+- Add a custom project cover or choose a gradient placeholder
+- Open existing projects
+- Edit project information
+- Duplicate projects
+- Delete projects with a confirmation dialog
+
+Each project must maintain completely separate characters, canon, scenes, branches, and AI conversations.
+
+### Project cards
+
+Display projects as beautiful cards featuring:
+
+- Cover image or gradient
+- Story title
+- Genre tags
+- Brief synopsis
+- Last edited date
+- Number of characters
+- Number of saved plot branches
+
+Use an attractive responsive grid.
+
+### Sample project
+
+Create one clearly labeled fictional demonstration project called:
+
+**The Glass Orchard**
+
+Genre: Gothic Fantasy / Mystery / Romance
+
+Synopsis:
+
+In a secluded town where memories grow inside crystalline fruit, a young archivist discovers that someone has been altering the town's history by harvesting memories before they ripen.
+
+Populate it with three sample characters, a handful of canonical facts, and two example plot developments.
+
+All sample information must be editable and removable.
+
+Do not mix sample data with user-created projects.
+
+---
+
+## 5. Character Bible
+
+Create a dedicated character-management interface.
+
+This feature should feel like a combination of a character encyclopedia, a personal journal, and a beautifully designed creative database.
+
+### Character gallery
+
+Display characters using attractive profile cards.
+
+Each card should include:
+
+- Character name
+- Role in story
+- Optional portrait
+- Short personality description
+- Relationship or affiliation tags
+- Button to open the full profile
+
+Use beautiful pink-bordered cards with subtle shadows.
+
+If no portrait is provided, use elegant placeholder artwork or initials.
+
+Do not require AI-generated portraits.
+
+### Character profile editor
+
+Users must be able to create, edit, save, and delete character profiles.
+
+Each character should support these fields:
+
+**Basic information**
+- Full name
+- Nickname
+- Age
+- Pronouns
+- Role in story
+- Species or identity, if relevant
+- Occupation
+- Physical description
+
+**Personality**
+- Core personality traits
+- Strengths
+- Flaws
+- Habits
+- Fears
+- Internal contradictions
+
+**Narrative psychology**
+- External goal
+- Internal desire
+- Central motivation
+- Emotional wound
+- Secrets
+- Moral boundaries
+- Character arc
+
+**Relationships**
+- Relationships with other characters
+- Relationship type
+- Current relationship status
+- Major conflicts
+- Hidden feelings or motivations
+
+**Additional information**
+- Backstory
+- Important events
+- Author's notes
+- Custom tags
+
+Allow sections to collapse and expand.
+
+Include autosaving and visible save feedback.
+
+Character fields should be user-editable without requiring AI approval.
+
+### Important
+
+The AI must never permanently rewrite character information without explicit user approval.
+
+Changes made through the normal character editor should update the character immediately.
+
+Changes suggested by AI should remain proposals until approved.
+
+---
+
+## 6. Story Canon: The Canon Keeper
+
+This is one of the application's most important features.
+
+Create a dedicated workspace called **Canon Keeper**.
+
+Its purpose is to maintain a reliable record of established facts within a story.
+
+Canon includes information such as:
+
+- Character history
+- Established relationships
+- Worldbuilding rules
+- Timeline events
+- Important locations
+- Character motivations
+- Supernatural or technological rules
+- Confirmed plot developments
+- Important secrets and revelations
+
+### Canon entries
+
+Users must be able to create, edit, delete, and categorize canon entries.
+
+Every entry should have:
+
+- Unique ID
+- Title
+- Description
+- Category
+- Optional linked characters
+- Creation and modification dates
+- Source: manually entered or approved AI suggestion
+
+Create categories such as:
+
+Character, Relationship, Worldbuilding, Timeline, Location, Plot, and Other.
+
+Allow users to search and filter entries.
+
+### Canon versus brainstorming
+
+Implement clearly separated statuses:
+
+**Canon:** Established story information.
+
+**Experimental:** Ideas under consideration.
+
+**Rejected:** Ideas that are no longer being pursued.
+
+**Archived:** Previously saved material retained for reference.
+
+Experimental material must never be silently treated as established canon.
+
+Only approved material should be added to the canonical story context used by the AI.
+
+### Canon protection
+
+When generating an AI response, provide the relevant approved canon entries as context.
+
+If the AI suggests a development that contradicts an established fact, identify the potential contradiction.
+
+Never automatically resolve a contradiction by rewriting the story.
+
+Instead, let the user decide whether to:
+
+- Preserve existing canon
+- Modify a canon entry
+- Keep the idea experimental
+- Reject the suggestion
+
+The writer must have final authority.
+
+---
+
+## 7. The What-If Engine: Signature Feature
+
+This should be Plotline's most impressive and visually engaging feature.
+
+Build a dedicated **What-If Engine** where writers can experiment with hypothetical narrative changes.
+
+The user enters a question such as:
+
+"What if the protagonist discovers the villain's identity halfway through the story?"
+
+Or:
+
+"What if two characters become romantically involved before either understands the other's true motivations?"
+
+The AI should consider the existing approved story canon and generate three meaningfully different possible directions.
+
+### What-If interface
+
+Display a large, beautifully styled prompt box.
+
+Use the heading:
+
+**What if everything changed?**
+
+Subtitle:
+
+*Explore new possibilities without rewriting what you've already created.*
+
+Provide an optional dropdown for the type of change:
+
+- Character motivation
+- Relationship
+- Plot twist
+- Worldbuilding
+- Ending
+- Conflict
+- Other
+
+Include a prominent strawberry-pink button:
+
+**Explore Possibilities**
+
+### Generated branches
+
+The AI must generate three distinct narrative directions.
+
+Each branch should include:
+
+1. A memorable branch title
+2. A short premise
+3. Major plot consequences
+4. Characters affected
+5. Changes to relationships or motivations
+6. New conflicts introduced
+7. Potential emotional or thematic impact
+8. Possible continuity conflicts
+9. Open questions for the writer
+
+The three branches should offer genuinely different narrative approaches rather than minor variations of the same idea.
+
+For example:
+
+- A psychologically driven development
+- A conflict-driven development
+- An unexpected or unconventional development
+
+Avoid forcing every story into these exact categories when other approaches are more appropriate.
+
+### Branch cards
+
+Display branches as three elegant cards side by side on desktop and stacked vertically on smaller screens.
+
+Use subtle blush, mauve, and lavender variations to distinguish the cards.
+
+Provide these actions for each branch:
+
+**Save as Experiment**
+
+**Explore Further**
+
+**Reject**
+
+**Promote Selected Ideas to Canon**
+
+Do not add an entire generated branch to canon automatically.
+
+When promoting a branch, let the writer review and individually approve the proposed canonical changes.
+
+### Branch history
+
+Save generated branches and their status within the current project.
+
+Users should be able to reopen earlier branches, compare them, rename them, and continue developing them.
+
+Preserve the relationship between an original hypothetical question and the branches generated from it.
+
+### Branch comparison
+
+Add a useful comparison view showing:
+
+- Main narrative direction
+- Biggest consequence
+- Characters affected
+- Potential canon conflicts
+- Current status
+
+Avoid displaying fabricated probability scores or pretending to predict which storyline will be objectively best.
+
+### AI output quality
+
+The AI should be imaginative and useful, but must distinguish:
+
+- Existing canon
+- Reasonable inference
+- New suggestions
+- Potential contradictions
+
+The AI should not invent established character facts and present them as though the writer already confirmed them.
+
+---
+
+## 8. AI Writing Companion
+
+Create a conversational AI assistant inside Plotline.
+
+It should function as a collaborative story-development partner.
+
+The companion should help users:
+
+- Brainstorm new ideas
+- Analyze character motivations
+- Identify potential plot holes
+- Develop relationships
+- Explore different character arcs
+- Suggest pacing improvements
+- Discuss themes
+- Compare story directions
+- Outline scenes
+- Develop dialogue
+- Provide constructive writing feedback
+
+### Conversational interface
+
+Use a beautiful pink chat workspace.
+
+Messages should be readable and organized.
+
+User messages should have a subtle pink background.
+
+Assistant messages should use cream or white cards.
+
+Include suggested actions such as:
+
+- Develop this character
+- Find plot inconsistencies
+- Explore a darker direction
+- Suggest three alternatives
+- Analyze this relationship
+- Outline the next chapter
+
+These should populate or submit meaningful prompts rather than being decorative buttons.
+
+### Context awareness
+
+When a project is selected, the AI should use the project's approved canon and relevant character profiles.
+
+It may also use the current conversation and explicitly selected experimental branches.
+
+It should not assume all previously brainstormed ideas are established canon.
+
+### Conversation controls
+
+Users should be able to:
+
+- Send messages
+- Review conversation history
+- Start a new conversation
+- Rename conversations
+- Delete conversations
+- Copy responses
+- Save useful responses as experimental notes
+
+The AI should offer constructive criticism and creative suggestions rather than automatically agreeing with every idea.
+
+### Writer autonomy
+
+The AI must not take over the story or insist on its preferred plot.
+
+It should help writers explore possibilities while respecting their stylistic intentions, including fantasy, horror, romance, drama, mystery, and other fictional genres.
+
+User-authored text and notes must always remain editable independently of the AI service.
+
+---
+
+## 9. Plot Board
+
+Create an interactive plot organization workspace.
+
+Users should be able to create plot cards representing:
+
+- Chapters
+- Scenes
+- Major events
+- Turning points
+- Character arcs
+
+Each card should support:
+
+- Title
+- Summary
+- Narrative order
+- Related characters
+- Location
+- Status
+- Author's notes
+
+Provide statuses:
+
+Idea, Planned, Drafting, Revised, Complete.
+
+Allow users to reorder scenes using simple controls. Drag-and-drop would be nice if implemented reliably, but accessible reorder buttons are an acceptable alternative.
+
+Use a visual board with soft pink cards.
+
+Allow users to switch between a board view and an ordered list.
+
+Do not require AI to manage the plot board.
+
+---
+
+## 10. Continuity Checker
+
+Create an AI-powered continuity checker.
+
+The user can paste or write a scene and ask the AI to review it against existing approved canon.
+
+The checker should look for:
+
+- Conflicting character details
+- Timeline inconsistencies
+- Relationship contradictions
+- Violations of established worldbuilding rules
+- Potentially inconsistent motivations
+- Information characters should not yet know
+
+### Results
+
+Separate findings into:
+
+**Potential Contradiction**
+
+**Needs Clarification**
+
+**No Conflict Detected**
+
+Provide a short explanation and reference the relevant canonical fact whenever possible.
+
+The AI must not claim a scene is definitely consistent just because it did not identify a conflict.
+
+Clearly state that AI continuity analysis may be incomplete.
+
+Do not rewrite the user's original scene automatically.
+
+Provide an optional button to request a suggested revision, with the result displayed separately.
+
+The user should decide whether to adopt any changes.
+
+---
+
+## 11. Real AI Integration
+
+Use Gemini for the initial AI-powered features.
+
+Use the Google AI Studio environment's supported Gemini integration.
+
+Model requests must be processed through an appropriate server-side implementation.
+
+Never put a private API key directly in frontend source code, browser localStorage, or a client-side request.
+
+Do not require the user to paste an API key into a public-facing interface.
+
+### AI behavior
+
+Use structured responses where appropriate.
+
+For the What-If Engine, return data in a predictable structure containing branch titles, descriptions, consequences, affected characters, and possible contradictions.
+
+Validate the AI response before displaying it.
+
+If the response is malformed, handle the error gracefully.
+
+Do not fabricate results when an API request fails.
+
+Display meaningful loading, empty, error, and retry states.
+
+### Context management
+
+Construct prompts from approved canon, relevant character profiles, and the current user request.
+
+Keep experimental branches separate unless the user explicitly chooses to include them.
+
+If the project is too large to send its complete context, clearly indicate that the AI used a limited subset of the story information.
+
+Do not silently claim perfect memory of an entire novel.
+
+### Model independence
+
+Design the AI integration so it can be replaced or extended with another authorized provider in the future.
+
+Do not build additional provider integrations in the initial version.
+
+Do not claim to bypass model safety policies or guarantee support for every type of generated content.
+
+---
+
+## 12. Persistence, Storage, and Export
+
+For the initial personal prototype, browser-based local storage is acceptable.
+
+The user must be able to refresh the page without losing projects, characters, canon, branches, notes, or chat histories.
+
+Store each project separately with stable IDs.
+
+### Data handling
+
+Implement:
+
+- Automatic saving
+- Clear saved/unsaved indicators
+- Confirmation before destructive actions
+- Graceful error handling for storage failures
+- No cross-project data leakage
+
+### Export
+
+Allow users to export a story project as JSON containing all its structured information.
+
+Provide a matching JSON import function with validation.
+
+Allow users to export a readable Markdown story bible.
+
+The Markdown document should include the project overview, characters, established canon, and plot outline.
+
+Do not label an export successful until the file has actually been created.
+
+Include a reminder in Settings that browser-local storage is not a cloud backup and may be lost if site data is cleared.
+
+---
+
+## 13. Functional Requirements
+
+This is extremely important.
+
+**Every interactive control must perform its advertised action.**
+
+Do not create decorative buttons that do nothing.
+
+The application must support real user workflows.
+
+At minimum, I should be able to:
+
+1. Open Plotline.
+2. Create a writing project.
+3. Create two characters.
+4. Write and save canonical story details.
+5. Refresh the page and see my saved data.
+6. Open the What-If Engine.
+7. Enter a hypothetical plot change.
+8. Generate three AI-powered narrative branches.
+9. Save a branch as an experiment.
+10. Reject another branch.
+11. Review suggested canon changes before accepting them.
+12. Return to the Character Bible and confirm that speculative ideas have not overwritten established facts.
+13. Export the project.
+14. Reimport it successfully.
+
+Avoid fake AI chat responses, placeholder API functions, nonfunctional menus, or static-only prototypes.
+
+A clearly labeled demonstration mode may include prewritten sample outputs, but those must never be represented as live AI-generated results.
+
+---
+
+## 14. UX and Accessibility
+
+Treat this as a genuine user-centered product.
+
+Prioritize:
+
+- Clear navigation
+- Keyboard accessibility
+- Visible focus states
+- Appropriate color contrast
+- Readable typography
+- Comfortable writing interfaces
+- Responsive layouts
+- Helpful empty states
+- Clear error recovery
+- Non-destructive experimentation
+- Confirmation before permanent deletion
+- Consistent interaction patterns
+
+Make it easy to distinguish between:
+
+- Saved story information
+- AI-generated suggestions
+- Experimental ideas
+- Rejected ideas
+- Approved canonical changes
+
+Use text labels alongside colors so users do not have to rely on color alone.
+
+Make the AI's limitations understandable without overwhelming users with technical information.
+
+---
+
+## 15. Settings and Personalization
+
+Create a simple Settings page with:
+
+- Project management options
+- Export and import controls
+- Writing interface preferences
+- AI feature status
+- Data storage information
+
+Support a standard writing font size control.
+
+Use the pink visual theme by default.
+
+An optional darker plum-and-rose theme may be added later, but prioritize the main pink design.
+
+---
+
+## 16. Technical Architecture
+
+Use React and TypeScript for the frontend.
+
+Use a sensible component-based structure with reusable UI elements.
+
+Use the backend facilities supported by Google AI Studio Build mode for Gemini requests and secret management.
+
+Organize the application into understandable components such as:
+
+- AppShell
+- Sidebar
+- Dashboard
+- ProjectCard
+- ProjectEditor
+- CharacterBible
+- CharacterEditor
+- CanonKeeper
+- CanonEntryEditor
+- WhatIfEngine
+- BranchCard
+- BranchComparison
+- WritingCompanion
+- PlotBoard
+- ContinuityChecker
+- Settings
+
+Use typed data structures for projects, characters, canon entries, conversations, scenes, and narrative branches.
+
+Keep UI state and stored data synchronized.
+
+Do not introduce unnecessary external dependencies or complicated infrastructure.
+
+Do not implement payments, subscriptions, authentication, social features, or a public community system.
+
+The focus is on making the core writing experience reliable, enjoyable, and visually beautiful.
+
+---
+
+## 17. Development Priorities
+
+I understand that this is a substantial application, so implement it incrementally.
+
+**Priority 1: Fully working foundation**
+
+Build the pink responsive interface, project dashboard, project creation, character editor, canon editor, persistent local storage, and JSON export/import.
+
+**Priority 2: Working AI interaction**
+
+Implement a real Gemini-powered What-If Engine that generates three distinct narrative branches from the current story context.
+
+Include the ability to save, reject, and review suggestions before adding anything to canon.
+
+**Priority 3: Writing companion**
+
+Implement project-aware AI chat with saved conversations.
+
+**Priority 4: Additional functionality**
+
+Add the plot board, continuity checker, Markdown export, improved visual branch comparisons, and interface refinements.
+
+If a feature is unfinished, clearly identify it rather than presenting it as functional.
+
+Never sacrifice the reliability of the first two priorities for decorative features.
+
+---
+
+## 18. Final Design Direction
+
+I want Plotline to feel like opening a beautifully designed writer's notebook.
+
+The experience should be feminine, thoughtful, visually delightful, and inspiring.
+
+The central idea is:
+
+**A writer should be able to explore an entirely different version of their story without losing the version they already love.**
+
+Every major design decision should support that principle.
+
+Make the pink theme feel memorable and premium. Use gorgeous typography, blush and strawberry tones, elegant cards, subtle animations, and excellent information hierarchy.
+
+This is a project I eventually want to feature in my UX and AI product design portfolio, so the design should feel professional and distinctive.
+
+However, functionality matters more than visual decoration.
+
+Start by implementing a working application with the essential project management, character bible, canon protection, and Gemini-powered What-If Engine.
+
+Once those features are functioning, continue expanding the application without breaking existing functionality.
+
+**Build the actual interactive application now, with working data persistence and real AI generation.**

@@ -1,0 +1,6 @@
+{
+  "name": "Plotline",
+  "description": "Where stories take shape. An editorial creative writing studio with canon protection, character bible, What-If branching engine, plot board, continuity checker, and AI writing companion.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
